@@ -34,6 +34,6 @@ def is_ticket_lucky(number):
 if __name__ == '__main__':
     number = digital_input('Enter the number (6 digits, please): ')
     if is_ticket_lucky(number):
-        print("A lucky one!")
+        print("A lucky one!😀")
     else:
-        print("Not a lucky one.")
+        print("Not a lucky one.😔")
