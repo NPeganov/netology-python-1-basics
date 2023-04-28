@@ -121,5 +121,5 @@ if __name__ == '__main__':
     sign = zodiac_sign(birth_date)
     if sign:
         print(sign)
-    # else:
-        # Мы понимаем, что zodiac_sign может вернуть None, но мы точно знаем, что в этом примере такого не случится.
+    else:
+        pass # Мы понимаем, что zodiac_sign может вернуть None, но мы точно знаем, что в этом примере такого не случится.
