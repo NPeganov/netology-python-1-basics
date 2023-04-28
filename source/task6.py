@@ -34,9 +34,7 @@
 """
 
 from common.digital_input import digital_input
-from common.square.circle import circle_square
-from common.square.triangle import triangle_square
-from common.square.rectangle import rectangle_square
+from common.square_culc import circle_square, rectangle_square, triangle_square
 
 
 if __name__ == '__main__':
