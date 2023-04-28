@@ -70,11 +70,13 @@ def get_birth_date():
                 month = None
                 print("Wrong enter")
 
-        if (day >= 31 and month in [4, 6, 9, 11]) or (day > 29 and month == 2):
+        if (day >= 31 and month in [4, 6, 9, 11]) or (month == 2 and day > 29):
             day = month = None
-            print("The day is not exist in the month. Wrong date, try again.")
+            print("The day does not exist in the month. Wrong date, try again.")
         else:
-            birth_date = date(year=2000, month=month, day=day)
+            birth_date = date(year=2000, month=month, day=day)  # Год не имеет отношения к знаку зодиака, но от того,
+            # является ли год високосным или нет, зависит наличие 29 февраля. Поэтому и было решено взять 2000 год:
+            # и год високосный, и число красивое.
 
     return birth_date
 
@@ -120,4 +122,4 @@ if __name__ == '__main__':
     if sign:
         print(sign)
     # else:
-        # Мы понимаем,что zodiac_sign может вернуть None, но мы точно знаем, что в этом примере такого не случится.
+        # Мы понимаем, что zodiac_sign может вернуть None, но мы точно знаем, что в этом примере такого не случится.

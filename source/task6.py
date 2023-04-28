@@ -33,21 +33,10 @@
 
 """
 
-import numpy as np
 from common.digital_input import digital_input
-
-
-def triangle_square(a, b, c):
-    p = (a + b + c) / 2
-    return np.sqrt(p * (p - a) * (p - b) * (p - c))
-
-
-def circle_square(r):
-    return np.pi * r ** 2
-
-
-def rectangle_square(a, b):
-    return a * b
+from common.square.circle import circle_square
+from common.square.triangle import triangle_square
+from common.square.rectangle import rectangle_square
 
 
 if __name__ == '__main__':
@@ -63,7 +52,7 @@ if __name__ == '__main__':
         elif (figure_type == 'circle') or (figure_type == 'круг'):
             r = digital_input("Enter the radius: ")
             s = circle_square(r)
-        elif (figure_type == 'square') or (figure_type == 'квадрат'):
+        elif (figure_type == 'square') or (figure_type == 'rectangle') or (figure_type == 'квадрат'):
             a = digital_input("Enter the first side: ")
             b = digital_input("Enter the second side: ")
             s = rectangle_square(a, b)
